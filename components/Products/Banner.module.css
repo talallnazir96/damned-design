@@ -1,0 +1,21 @@
+.banner {
+  padding: 10px 0 0 0;
+  text-align: center;
+
+}
+
+.bannerText {
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  margin-bottom: 1.5rem;  
+}
+
+
+@media (max-width: 767px) {
+  .bannerText {
+    font-size: 3vw;
+    line-height: 3vw;
+  }
+}
+

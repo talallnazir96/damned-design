@@ -1,0 +1,109 @@
+.orderComplete {
+  display: flex;
+  margin: auto;
+  padding: 3rem 10rem;
+  column-gap: 2.5rem;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.orderDetails {
+  font-family: "Gilroy", sans-serif !important;
+  width: 100%;
+  max-width: 700px;
+}
+
+.orderDetails * {
+  font-family: "Gilroy", sans-serif;
+}
+
+table.productTable {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.productTable th {
+  background-color: #e2e2e2;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.productTable td {
+  padding: 0.75rem;
+  background-color: #f5f5f5;
+}
+
+table.billingTable {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  /* max-width: 450px;
+  margin-left: auto; */
+}
+
+.billingTable td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.billingTable tr:nth-child(even) {
+  background-color: #e6e6e6;
+}
+
+.billingTable tr:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+
+.billingTable td:nth-child(even) {
+  text-align: end;
+  padding-right: 2rem;
+}
+
+.addresses {
+  display: grid;
+  grid-template-columns: 1.223fr 1fr;
+  grid-gap: 1rem;
+  margin-top: 2rem;
+}
+.shipping_adress_holder {
+  text-align: right !important;
+}
+
+.addresses p {
+  margin: 0;
+}
+table.productTable td:last-child,
+table.productTable th:last-child {
+  padding: 0.75rem 0.4rem;
+  text-align: center;
+}
+.paymentRow {
+  display: flex;
+  column-gap: 2rem;
+  margin-bottom: 0.75rem;
+}
+@media (max-width: 768px) {
+  .orderComplete {
+    padding: 10px 15px;
+  }
+}
+@media (max-width: 576px) {
+  .billingTable td:nth-child(even) {
+    padding-right: 0.5rem;
+  }
+  .addresses div {
+    margin: 20px 0;
+    text-align: left !important;
+  }
+  .addresses {
+    display: inline;
+  }
+}

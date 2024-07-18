@@ -1,0 +1,7 @@
+.backdropContainer {
+  position: absolute;
+  z-index: 100;
+  /* background-color: red; */
+  height: 100px;
+  width: 100px;
+}

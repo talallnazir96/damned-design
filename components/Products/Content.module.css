@@ -1,0 +1,172 @@
+.content {
+  padding: 1rem 3rem;
+  border-top: 2px solid var(--clr-dark);
+}
+
+.filterBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.results {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.results p {
+  margin: auto 0;
+}
+
+.productsSection {
+  margin-top: 15px;
+  display: grid;
+  /* minmax */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-content: center;
+  align-self: center;
+  /* grid-gap: 10px; */
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+
+.product,
+.product2 {
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.product:hover {
+  box-shadow: 0 2px 20px 3px grey;
+}
+
+
+
+.product {
+  max-width: fit-content;
+  margin: auto;
+}
+
+.product:hover {
+  transform: scale(1.02);
+}
+
+.productTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: auto 0;
+}
+
+.productPrice {
+  /* font-size: 24px;
+    line-height: 29px; */
+  font-weight: 600;
+}
+
+.label {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  max-height: 50px;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  transform: translateY(-40%);
+}
+
+.sortBy {
+  display: flex;
+  align-items: center;
+}
+
+.sortBy label {
+  margin-right: 10px;
+}
+
+.sortBy select {
+  width: 140px;
+  padding: 4px 4px;
+  /* height: 40px; */
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.imageBorder {
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.lastViewContent {
+  flex: 1 0 21%;
+  /* explanation below */
+  margin: 5px;
+}
+
+@media (max-width: 1024px) {
+  .productsSection {
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  }
+}
+@media (max-width: 991px) {
+  .filterBar {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .sortBy select {
+    width: fit-content;
+  }
+
+  .results {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem 0.25rem;
+  }
+
+  .results {
+    /* margin-top: 20px; */
+    text-align: center;
+  }
+
+  .lastViewContent {
+    flex: 30%;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .productTitle,
+  .productPrice {
+    font-size: 0.9rem;
+  }
+
+  .lastViewContent:nth-child(3),
+  .lastViewContent:nth-child(4) {
+    display: none;
+  }
+  .productsSection {
+    grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+  }
+}
+@media (max-width: 576px) {
+  .productsSection {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+}
+@media (max-width: 360px) {
+  .results {
+    font-size: 15px;
+  }
+}
